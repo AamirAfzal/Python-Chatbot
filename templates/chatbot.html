@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body style="background-color:black;color:white">
+    <div style="display:flex;flex-direction:column;align-items:center;margin-top:8%">
+      <div style="height:400px;width:360px;border:1px solid blue;display:flex;flex-direction:column;align-items:center;justify-content:center">
+      <h3>Ask Your Queries</h3>
+      <img src="https://image.freepik.com/free-vector/cute-smiling-robot-chat-bot-communication-signs-modern-flat-cartoon-character-illustration-isolated-white-speak-bubble-voice-support-service-communication-chat-bot_92289-518.jpg" style="height:200px;width:200px"/>
+      <br>
+
+    <form action="{% url 'chatbotresult' %}">
+
+
+      {% csrf_token %}
+      Ask: <input type="text"required name="userinput" value="">
+
+
+<input type="submit" name="" value="submit">
+
+    </form>
+    <p style="text-align:center">
+      {{ans}}
+      </p>
+
+</div>
+      </div>
+  </body>
+</html>
